@@ -6,9 +6,9 @@
 
 ### Working flow
 
-			READ FROM				  SCRIPT				WRITE TO
+		READ FROM		  SCRIPT	      WRITE TO
 	---------------------------------------------------------------------------
-	zones.txt,Route53     			> export.sh         > original_zones/*.zone
+	zones.txt,Route53     		> export.sh         > original_zones/*.zone
 	zones.txt,original_zones/*.zone > replace.sh        > changed_zones/*.zone
 	zones.txt,changed_zones/*.zone  > apply_changes.sh  > Route53
 	zones.txt,original_zones/*.zone > revert_changes.sh > Route53
